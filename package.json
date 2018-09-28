@@ -4,7 +4,7 @@
   "description": "An event bus module for Amphora using Redis",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "author": "New York Media",
   "license": "MIT",
@@ -12,5 +12,8 @@
     "clay-log": "^1.3.1",
     "highland": "^2.13.0",
     "ioredis": "^4.0.0"
+  },
+  "devDependencies": {
+    "jest": "^23.6.0"
   }
 }

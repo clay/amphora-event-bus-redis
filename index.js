@@ -24,3 +24,6 @@ function publish(topic, msg) {
 
 module.exports.connect = connect;
 module.exports.publish = publish;
+
+// For testing
+module.exports.setLog = mock => log = mock;

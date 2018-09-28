@@ -21,7 +21,7 @@ function init() {
   logInstance = clayLog.getLogger();
 }
 
-function setup(meta = {}) {
+function setup(meta) {
   return clayLog.meta(meta, logInstance);
 }
 
