@@ -4,7 +4,9 @@
   "description": "An event bus module for Amphora using Redis",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "eslint": "eslint --max-warnings 0 index.js log.js",
+    "jest": "jest",
+    "test": "npm run eslint && npm run jest"
   },
   "author": "New York Media",
   "license": "MIT",
@@ -14,6 +16,7 @@
     "ioredis": "^4.0.0"
   },
   "devDependencies": {
+    "eslint": "^5.6.1",
     "jest": "^23.6.0"
   }
 }
