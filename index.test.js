@@ -32,5 +32,17 @@ describe('index', () => {
       lib.publish('topic', 'msg');
       expect(Redis.prototype.publish.mock.calls.length).toBe(1);
     });
+
+    test('sends hostname and pid in the message', () => {
+      lib.client = true;
+      lib.publish('topic', 'msg');
+      expect(Redis.prototype.publish.mock.calls.length).toBe(1);
+      expect(Redis.prototype.publish).toHaveBeenCalledWith('topic', JSON.stringify({
+        hostname: require('os').hostname(),
+        pid: process.pid,
+        msg: 'msg'
+      }));
+    });
+
   });
 });
